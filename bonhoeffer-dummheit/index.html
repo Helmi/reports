@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dietrich Bonhoeffer und „Von der Dummheit“ – ein visueller Recherchebericht</title>
+<meta name="description" content="Recherchebericht zu Dietrich Bonhoeffer (1906–1945): Leben, Widerstand, Haft und Tod sowie sein Text „Von der Dummheit“ aus „Nach zehn Jahren“ (Weihnachten 1942) – mit geprüften Originalzitaten und Quellen.">
+<style>
+:root{
+  --paper:#f6f1e7; --paper2:#efe7d6; --ink:#1f1b16; --muted:#6b6256; --line:#d9cdb6;
+  --accent:#8a2f1d; --accent2:#2f4a5a; --gold:#b08a3e; --card:#fffdf8;
+  --shadow:0 1px 2px rgba(0,0,0,.05),0 6px 24px rgba(60,40,10,.08);
+  --serif: "Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{--paper:#16130f;--paper2:#1d1914;--ink:#ece4d4;--muted:#a89c89;--line:#3a3227;--accent:#e08a6d;--accent2:#8fb3c7;--gold:#d2ae62;--card:#201b15;--shadow:0 1px 2px rgba(0,0,0,.4),0 6px 24px rgba(0,0,0,.35)}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--accent2);text-underline-offset:3px}
+a:hover{color:var(--accent)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+header.hero{background:linear-gradient(160deg,#1f1b16 0%,#2b241b 55%,#3a2a1c 100%);color:#f4ecdc;padding:72px 0 56px;position:relative;overflow:hidden}
+header.hero:after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:1px solid rgba(176,138,62,.35);box-shadow:0 0 0 40px rgba(176,138,62,.06),0 0 0 90px rgba(176,138,62,.04)}
+.kicker{font-family:var(--sans);letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:#d2ae62;margin:0 0 14px}
+h1{font-size:clamp(34px,6vw,60px);line-height:1.05;margin:0 0 18px;font-weight:600;letter-spacing:-.01em}
+h1 em{font-style:italic;color:#e6c98a;font-weight:500}
+.lede{font-size:clamp(17px,2.2vw,21px);max-width:760px;color:#e2d7c3;margin:0}
+.meta{font-family:var(--sans);font-size:13px;color:#b9ab94;margin-top:26px}
+nav.toc{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav.toc ul{list-style:none;margin:0;padding:10px 0;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+nav.toc ul::-webkit-scrollbar{display:none}
+nav.toc a{display:block;white-space:nowrap;font-family:var(--sans);font-size:13.5px;text-decoration:none;color:var(--muted);padding:6px 12px;border-radius:999px;border:1px solid transparent}
+nav.toc a:hover{color:var(--ink);border-color:var(--line);background:var(--card)}
+section{padding:56px 0 8px}
+h2{font-size:clamp(26px,3.6vw,36px);margin:0 0 8px;line-height:1.15;font-weight:600}
+h2 .num{font-family:var(--sans);font-size:13px;color:var(--gold);letter-spacing:.14em;display:block;margin-bottom:6px}
+h3{font-size:21px;margin:28px 0 8px;line-height:1.25}
+.sub{color:var(--muted);margin:0 0 26px;max-width:760px}
+p{margin:0 0 16px}
+.grid{display:grid;gap:16px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;box-shadow:var(--shadow)}
+.card h4{margin:0 0 6px;font-size:18px}
+.card .lbl{font-family:var(--sans);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;display:block}
+.facts{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.facts .card strong{display:block;font-size:22px;line-height:1.2;margin-bottom:4px}
+.facts .card span{color:var(--muted);font-size:15.5px}
+/* timeline */
+.tl{position:relative;margin:10px 0 0;padding:0}
+.tl:before{content:"";position:absolute;left:84px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--line),var(--gold),var(--accent))}
+.ev{position:relative;display:grid;grid-template-columns:72px 1fr;gap:28px;margin:0 0 18px}
+.ev .yr{font-family:var(--sans);font-weight:700;font-size:15px;text-align:right;color:var(--accent2);padding-top:3px}
+.ev .bx{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;box-shadow:var(--shadow);font-size:16.5px}
+.ev .bx:before{content:"";position:absolute;left:79px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:3px solid var(--gold)}
+.ev.key .bx{border-left:4px solid var(--accent)}
+.ev.key .bx:before{border-color:var(--accent)}
+.ev .bx b{font-weight:600}
+.ev .src{font-family:var(--sans);font-size:12px;color:var(--muted);display:block;margin-top:4px}
+.era{font-family:var(--sans);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:26px 0 12px 100px}
+/* quotes */
+blockquote.q{margin:0;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px 18px 26px;box-shadow:var(--shadow);position:relative}
+blockquote.q:before{content:"„";position:absolute;left:12px;top:-18px;font-size:76px;line-height:1;color:var(--gold);font-family:Georgia,serif}
+blockquote.q p{font-size:19px;font-style:italic;margin:6px 0 10px}
+blockquote.q footer{font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+blockquote.big p{font-size:clamp(21px,3vw,28px);line-height:1.4}
+.expl{margin:10px 2px 0;font-size:16.5px;color:var(--ink)}
+.expl b{color:var(--accent)}
+.step{display:grid;grid-template-columns:52px 1fr;gap:16px;margin:0 0 26px}
+.step .n{width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-weight:700;font-size:17px;margin-top:4px}
+.step h3{margin-top:4px}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0 30px;font-family:var(--sans);font-size:14px}
+.flow span{background:var(--card);border:1px solid var(--line);padding:8px 12px;border-radius:10px}
+.flow i{color:var(--gold);font-style:normal}
+.note{background:var(--paper2);border-left:4px solid var(--gold);padding:14px 18px;border-radius:0 10px 10px 0;font-size:16px;margin:18px 0}
+.note.warn{border-left-color:var(--accent)}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:4px 20px;margin:18px 0;box-shadow:var(--shadow)}
+summary{cursor:pointer;font-family:var(--sans);font-weight:600;font-size:15px;padding:14px 0;color:var(--accent2)}
+details .fulltext p{font-size:17px}
+.works .card{display:flex;flex-direction:column}
+.works .yr{font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.works blockquote{margin:10px 0 8px;padding-left:12px;border-left:3px solid var(--gold);font-style:italic;font-size:16.5px}
+.works .ref{font-family:var(--sans);font-size:12px;color:var(--muted);margin-top:auto}
+table.check{width:100%;border-collapse:collapse;font-size:16px;background:var(--card);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+table.check th,table.check td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+table.check th{font-family:var(--sans);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--paper2)}
+.tag{display:inline-block;font-family:var(--sans);font-size:11.5px;font-weight:700;padding:3px 8px;border-radius:999px;white-space:nowrap}
+.ok{background:#e3efe2;color:#25572a}.mid{background:#f6ecd2;color:#7a5a12}.no{background:#f6dcd5;color:#86301c}
+@media (prefers-color-scheme: dark){.ok{background:#22382a;color:#9fd5a5}.mid{background:#3b3220;color:#e3c37a}.no{background:#3e231c;color:#f0a58f}}
+ol.src{padding-left:22px;font-size:16px}
+ol.src li{margin-bottom:9px}
+ol.src .d{color:var(--muted);font-family:var(--sans);font-size:12.5px}
+ul.read{list-style:none;padding:0;margin:0;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+ul.read li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:16px;box-shadow:var(--shadow)}
+ul.read li b{display:block;font-size:17px}
+ul.read .why{color:var(--muted);font-size:14.5px;display:block;margin-top:4px}
+footer.end{margin-top:60px;padding:36px 0 50px;border-top:1px solid var(--line);font-family:var(--sans);font-size:13px;color:var(--muted)}
+@media (max-width:640px){
+  body{font-size:17px}
+  .tl:before{left:14px}
+  .ev{grid-template-columns:1fr;gap:4px;padding-left:36px}
+  .ev .yr{text-align:left}
+  .ev .bx:before{left:9px;top:6px}
+  .era{margin-left:36px}
+  .step{grid-template-columns:1fr}
+  table.check thead{display:none}
+  table.check tr{display:block;border-bottom:1px solid var(--line)}
+  table.check td{display:block;border:0;padding:8px 14px}
+}
+@media print{nav.toc{display:none}header.hero{background:none;color:#000}.card,blockquote.q,details{box-shadow:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Recherchebericht · Theologie &amp; Widerstand</p>
+    <h1>Dietrich Bonhoeffer<br>und <em>„Von der Dummheit“</em></h1>
+    <p class="lede">Wer Bonhoeffer war, was historisch um ihn herum geschah – und was er Weihnachten 1942 in seiner Rechenschaft „Nach zehn Jahren“ tatsächlich über die Dummheit geschrieben hat. Mit geprüften Originalzitaten, Erläuterungen und Quellen.</p>
+    <p class="meta">Erstellt für Frank Helmschrott · Stand: 13. Oktober 2026 · Zitate nach: Bonhoeffer, <i>Widerstand und Ergebung</i>, Gütersloher Verlagshaus, 26. Aufl. 2025 (Leseprobe des Verlags), abgeglichen mit der Erstausgabe 1951 (Wikisource) und DBW 8</p>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Inhalt">
+  <div class="wrap"><ul>
+    <li><a href="#ueberblick">Überblick</a></li>
+    <li><a href="#leben">Lebenslauf</a></li>
+    <li><a href="#kontext">„Nach zehn Jahren“</a></li>
+    <li><a href="#dummheit">Von der Dummheit</a></li>
+    <li><a href="#umfeld">Weitere Abschnitte</a></li>
+    <li><a href="#werke">Hauptwerke</a></li>
+    <li><a href="#zitatcheck">Zitat-Check</a></li>
+    <li><a href="#quellen">Quellen</a></li>
+    <li><a href="#lesen">Leseliste</a></li>
+  </ul></div>
+</nav>
+
+<main class="wrap">
+
+<!-- 1 -->
+<section id="ueberblick">
+  <h2><span class="num">01 · ÜBERBLICK</span>Das Wichtigste in einer Minute</h2>
+  <p class="sub">Dietrich Bonhoeffer (1906–1945) war evangelischer Theologe, einer der führenden Köpfe der Bekennenden Kirche und Mitglied des Widerstands um die militärische Abwehr. Er wurde am 9. April 1945 im KZ Flossenbürg ermordet.</p>
+  <div class="grid g3 facts">
+    <div class="card"><span class="lbl">Geboren</span><strong>4. Februar 1906</strong><span>in Breslau, sechstes von acht Kindern des Psychiaters Karl Bonhoeffer und seiner Frau Paula</span></div>
+    <div class="card"><span class="lbl">Kirchenkampf</span><strong>1935–1937 Finkenwalde</strong><span>Leiter des Predigerseminars der Bekennenden Kirche; 1937 polizeilich geschlossen, danach illegale Sammelvikariate bis 1940</span></div>
+    <div class="card"><span class="lbl">Widerstand</span><strong>ab 1940 Abwehr</strong><span>über den Schwager Hans von Dohnanyi im Amt Ausland/Abwehr; Auslandsreisen, um Kontakte für den Widerstand zu knüpfen</span></div>
+    <div class="card"><span class="lbl">Der Text</span><strong>Weihnachten 1942</strong><span>„Nach zehn Jahren“ – Rechenschaft für Dohnanyi, Oster und Bethge; darin der Abschnitt „Von der Dummheit“</span></div>
+    <div class="card"><span class="lbl">Haft</span><strong>5. April 1943</strong><span>verhaftet; bis 8. Oktober 1944 Militärgefängnis Tegel, dann Gestapo-Gefängnis Prinz-Albrecht-Straße, Februar 1945 KZ Buchenwald</span></div>
+    <div class="card"><span class="lbl">Ermordet</span><strong>9. April 1945</strong><span>nach einem SS-Standgericht im Hof des Arrestbaus des KZ Flossenbürg erhängt</span></div>
+  </div>
+  <div class="note"><b>Zum Begriff:</b> Die Formel „Theorie der Dummheit“ stammt nicht von Bonhoeffer. Seine Überschrift lautet schlicht <i>„Von der Dummheit“</i>; es ist ein rund zweiseitiger Abschnitt innerhalb der Aufzeichnung <i>„Nach zehn Jahren“</i>, keine eigenständige Abhandlung.</div>
+</section>
+
+<!-- 2 -->
+<section id="leben">
+  <h2><span class="num">02 · LEBENSLAUF</span>Was historisch geschah</h2>
+  <p class="sub">Zeitleiste auf Basis des Lebenslaufs der Internationalen Bonhoeffer-Gesellschaft / Gütersloher Verlagshaus, ergänzt um Angaben der KZ-Gedenkstätte Flossenbürg und der Gedenkstätte Deutscher Widerstand. Rot markiert: Schlüsselereignisse.</p>
+
+  <div class="tl">
+    <div class="era">Herkunft &amp; Ausbildung</div>
+    <div class="ev"><div class="yr">1906</div><div class="bx"><b>4. Februar:</b> Geburt in Breslau. Als er sechs Jahre alt ist, zieht die Familie nach Berlin.<span class="src">IBG-Lebenslauf; KZ-Gedenkstätte Flossenbürg</span></div></div>
+    <div class="ev"><div class="yr">1923–27</div><div class="bx">Theologiestudium in Tübingen, ab 1924 in Berlin. <b>17. Dezember 1927:</b> Promotion bei Reinhold Seeberg mit <i>Sanctorum Communio</i> – mit 21 Jahren.<span class="src">IBG-Lebenslauf</span></div></div>
+    <div class="ev"><div class="yr">1928</div><div class="bx">Vikariat in der deutschen Gemeinde in Barcelona.<span class="src">IBG-Lebenslauf</span></div></div>
+    <div class="ev"><div class="yr">1930–31</div><div class="bx"><b>Juli 1930:</b> Habilitation mit <i>Akt und Sein</i>. 1930/31 Studienjahr am Union Theological Seminary in New York. 1931 Privatdozent in Berlin, im November Ordination; Arbeit mit Konfirmanden im Arbeiterbezirk Wedding.<span class="src">IBG-Lebenslauf; Flossenbürg</span></div></div>
+
+    <div class="era">1933–1939 · Kirchenkampf</div>
+    <div class="ev key"><div class="yr">1933</div><div class="bx"><b>1. Februar</b>, zwei Tage nach Hitlers Ernennung: Rundfunkvortrag über den Wandel des Führerbegriffs. Die Gedenkstätte Flossenbürg zitiert daraus: <i>„Führer und Amt, die sich selbst vergotten, spotten Gott.“</i> Die Übertragung wurde abgebrochen.<br><b>April:</b> Aufsatz „Die Kirche vor der Judenfrage“ – mit der Forderung, notfalls „dem Rad selbst in die Speichen zu fallen“ (siehe <a href="#werke">Werke</a>).<br><b>Oktober:</b> Pfarramt in London (bis Frühjahr 1935); enge Verbindung zu Bischof George Bell.<span class="src">IBG-Lebenslauf; Flossenbürg; GDW</span></div></div>
+    <div class="ev"><div class="yr">1934</div><div class="bx">Ökumenische Konferenz in Fanø. Bonhoeffer gehört zu den Mitbegründern des Pfarrernotbundes, aus dem die <b>Bekennende Kirche</b> hervorgeht – die Opposition gegen die „Deutschen Christen“.<span class="src">IBG-Lebenslauf; IBG-Flyer; Flossenbürg</span></div></div>
+    <div class="ev key"><div class="yr">1935</div><div class="bx"><b>April:</b> Beginn des Predigerseminars der Bekennenden Kirche auf dem Zingsthof, ab <b>24. Juni</b> in <b>Finkenwalde</b> bei Stettin.<span class="src">IBG-Lebenslauf; GDW</span></div></div>
+    <div class="ev"><div class="yr">1936</div><div class="bx"><b>5. August:</b> Entzug der Lehrbefugnis an der Berliner Universität.<span class="src">IBG-Lebenslauf</span></div></div>
+    <div class="ev"><div class="yr">1937</div><div class="bx"><b>Ende September:</b> polizeiliche Schließung des Predigerseminars; im November sind 27 ehemalige Finkenwalder Seminaristen in Haft. <b>November:</b> <i>Nachfolge</i> erscheint. Ab Dezember illegale Sammelvikariate in Köslin und Groß-Schlönwitz (später Sigurdshof).<span class="src">IBG-Lebenslauf</span></div></div>
+    <div class="ev"><div class="yr">1938</div><div class="bx">Ausweisung aus Berlin. <b>Februar:</b> erste Kontakte zu Sack, Oster und indirekt Canaris und Beck; Bonhoeffer ist in die Staatsstreichplanungen seines Schwagers Hans von Dohnanyi eingeweiht. <b>September:</b> <i>Gemeinsames Leben</i> in Göttingen geschrieben.<span class="src">IBG-Lebenslauf; GDW</span></div></div>
+    <div class="ev key"><div class="yr">1939</div><div class="bx"><b>Juni:</b> Reise in die USA. Bonhoeffer bricht den Aufenthalt ab und ist am <b>27. Juli</b> zurück in Berlin. Begründung (übersetzt): <i>„Ich werde kein Recht haben, an der Wiederherstellung des christlichen Lebens nach dem Kriege in Deutschland mitzuwirken, wenn ich nicht die Prüfungen dieser Zeit mit meinem Volk teile.“</i><span class="src">IBG-Lebenslauf; Zitat nach KZ-Gedenkstätte Flossenbürg</span></div></div>
+
+    <div class="era">1940–1943 · Konspiration</div>
+    <div class="ev key"><div class="yr">1940</div><div class="bx">Die Gestapo lässt die Sammelvikariate schließen. Bonhoeffer wird dem <b>Amt Ausland/Abwehr</b> beigeordnet (offiziell zur Nutzung seiner Auslandskontakte, faktisch für den Widerstand). <b>4. September:</b> Redeverbot und Meldepflicht. Beginn der Arbeit an der <i>Ethik</i>.<span class="src">IBG-Lebenslauf; Flossenbürg</span></div></div>
+    <div class="ev"><div class="yr">1941</div><div class="bx"><b>27. März:</b> Druck- und Veröffentlichungsverbot. Reisen in die Schweiz. Im <b>Oktober</b>, wenige Tage nach Beginn der Berliner Deportationen, verfasst er Berichte darüber für oppositionelle Militärs; Abschriften gehen an Ludwig Beck.<span class="src">IBG-Lebenslauf; Flossenbürg; GDW (Dohnanyi)</span></div></div>
+    <div class="ev key"><div class="yr">1942</div><div class="bx">Reisen nach Norwegen, Schweden und in die Schweiz; Ende Mai/Anfang Juni Treffen mit Bischof Bell in Schweden. Beteiligung am <b>„Unternehmen Sieben“</b>: Von der Deportation bedrohte Juden werden als angebliche Abwehr-Agenten in die Schweiz gebracht. <b>Weihnachten / Jahreswende 1942/43:</b> „Nach zehn Jahren“.<span class="src">IBG-Lebenslauf; GDW (Dohnanyi); Bonhoeffer Initiative</span></div></div>
+    <div class="ev key"><div class="yr">1943</div><div class="bx"><b>17. Januar:</b> Verlobung mit Maria von Wedemeyer. <b>5. April:</b> Haussuchung und Verhaftung, am selben Tag wird Dohnanyi in seinem Dienstzimmer festgenommen (offiziell wegen angeblicher Devisenvergehen). Einlieferung ins Militärgefängnis <b>Berlin-Tegel</b>. Im September Anklage auf „Zersetzung der Wehrkraft“.<span class="src">IBG-Lebenslauf; GDW</span></div></div>
+
+    <div class="era">1943–1945 · Haft &amp; Tod</div>
+    <div class="ev"><div class="yr">1944</div><div class="bx"><b>30. April:</b> erster „theologischer Brief“ an Eberhard Bethge. <b>20. Juli:</b> Das Attentat scheitert. Im September findet die Gestapo im Zossener Aktenfund Belastungsmaterial. Fluchtpläne gibt Bonhoeffer wegen befürchteter Sippenhaft auf. <b>8. Oktober:</b> Verlegung in den Gestapo-Keller Prinz-Albrecht-Straße. <b>19. Dezember:</b> letzter Brief an Maria von Wedemeyer, mit „Von guten Mächten“.<span class="src">IBG-Lebenslauf; Vorwort Bethge zu WuE; Flossenbürg</span></div></div>
+    <div class="ev key"><div class="yr">1945</div><div class="bx"><b>7. Februar:</b> KZ Buchenwald. <b>3.–6. April:</b> Transport über Regensburg nach Schönberg. <b>5. April:</b> Hitler ordnet die Hinrichtung der noch lebenden „Verschwörer“ an. <b>8. April:</b> Ankunft in Flossenbürg, nächtliches SS-Standgericht (Thorbeck, Huppenkothen, Koegel). <b>9. April, morgens:</b> Erhängung im Hof des Arrestbaus, zusammen mit Wilhelm Canaris, Hans Oster, Karl Sack, Theodor Strünck und Ludwig Gehre. Die Familie erfährt erst Monate später davon.<span class="src">IBG-Lebenslauf; KZ-Gedenkstätte Flossenbürg</span></div></div>
+    <div class="ev"><div class="yr">1945</div><div class="bx">Hans von Dohnanyi wird wahrscheinlich am 9. April im KZ Sachsenhausen ermordet; Bruder Klaus Bonhoeffer in der Nacht vom 22. auf 23. April in Berlin von einem RSHA-Kommando erschossen.<span class="src">GDW-Biografien</span></div></div>
+    <div class="ev"><div class="yr">1951</div><div class="bx">Eberhard Bethge gibt <i>Widerstand und Ergebung</i> heraus (Chr. Kaiser, München). Den Briefen stellt er „Nach zehn Jahren“ voran.<span class="src">Vorwort Bethge (Aug. 1951); Wikisource</span></div></div>
+    <div class="ev"><div class="yr">1996</div><div class="bx">Die NS-Unrechtsurteile werden aufgehoben; Bonhoeffer ist damit auch formal rehabilitiert. Bis dahin galt das Todesurteil als rechtsgültig.<span class="src">KZ-Gedenkstätte Flossenbürg</span></div></div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section id="kontext">
+  <h2><span class="num">03 · DER TEXT</span>„Nach zehn Jahren“: Entstehung und Anlass</h2>
+  <p class="sub">Untertitel: <i>„Rechenschaft an der Wende zum Jahr 1943“</i>. Zehn Jahre nach dem 30. Januar 1933 zieht Bonhoeffer eine Bilanz, nicht für die Öffentlichkeit, sondern für einen kleinen Kreis von Mitverschworenen.</p>
+  <div class="grid g2">
+    <div class="card"><span class="lbl">Empfänger</span><h4>Drei Vertraute</h4><p>Das maschinengeschriebene Original mit Durchschlägen ging als Weihnachtsgabe an <b>Hans von Dohnanyi</b>, <b>Hans Oster</b> (Chef der Zentralabteilung der Abwehr) und <b>Eberhard Bethge</b>. Hätte die Gestapo den Text gefunden, wäre er belastend gewesen.</p><p style="font-family:var(--sans);font-size:12.5px;color:var(--muted);margin:0">Quelle: M. Miyata / I. Tödt, IBG 2023</p></div>
+    <div class="card"><span class="lbl">Überlieferung</span><h4>Versteckt im Dach</h4><p>Ein Exemplar überstand Haussuchungen und Bomben <i>„zwischen Dachziegeln und Sparren“</i> des Elternhauses in der Marienburger Allee 43 in Berlin-Charlottenburg (so Bethge im Vorwort 1951). Heute: DBW 8, S. 19–39.</p><p style="font-family:var(--sans);font-size:12.5px;color:var(--muted);margin:0">Quellen: Vorwort Bethge; IBG</p></div>
+    <div class="card"><span class="lbl">Lage Ende 1942</span><h4>Stalingrad – und akute Gefahr</h4><p>Draußen die Kämpfe um Stalingrad. Für die Verschwörer in der Abwehr wurde es gefährlich: Nach der Verhaftung des Abwehr-Mannes Wilhelm Schmidhuber im Herbst 1942 drängte das Reichssicherheitshauptamt bereits auf Verhaftungen.</p><p style="font-family:var(--sans);font-size:12.5px;color:var(--muted);margin:0">Quellen: Miyata/IBG; Vorwort Bethge</p></div>
+    <div class="card"><span class="lbl">Charakter</span><h4>Erfahrung, kein System</h4><p>Bonhoeffer will ausdrücklich <i>„nicht persönliche Erlebnisse, nichts systematisch Geordnetes, nicht Auseinandersetzungen und Theorien“</i> bieten, sondern <i>„gemeinsam im Kreise Gleichgesinnter gewonnene Ergebnisse auf dem Gebiet des Menschlichen“</i>.</p><p style="font-family:var(--sans);font-size:12.5px;color:var(--muted);margin:0">WuE, S. 9</p></div>
+  </div>
+  <div class="note">Die 16 Abschnitte (Reihenfolge der Ausgabe): Ohne Boden unter den Füßen · Wer hält stand? · Civilcourage? · Vom Erfolg · <b>Von der Dummheit</b> · Menschenverachtung? · Immanente Gerechtigkeit · Einige Glaubenssätze über das Walten Gottes in der Geschichte · Vertrauen · Qualitätsgefühl · Mitleiden · Vom Leiden · Gegenwart und Zukunft · Optimismus · Gefährdung und Tod · Sind wir noch brauchbar? · (ergänzend:) Der Blick von unten.<br><span style="font-family:var(--sans);font-size:12.5px;color:var(--muted)">Bethge hielt den Essay für eines der Zeugnisse des Widerstands, „die man noch lesen wird, wenn dessen Verfassungs- und Organisationsentwürfe längst vergessen sind“ (zitiert nach Miyata).</span></div>
+</section>
+
+<!-- 4 -->
+<section id="dummheit">
+  <h2><span class="num">04 · KERNSTÜCK</span>„Von der Dummheit“ – Satz für Satz</h2>
+  <p class="sub">Der Gedankengang in sechs Schritten. Alle Zitate wörtlich nach <i>Widerstand und Ergebung</i>, Gütersloher Verlagshaus, 26. Aufl. 2025, S. 14–16 (Orthografie des Originals).</p>
+
+  <div class="flow" aria-label="Gedankengang"><span>1 · Phänomen</span><i>→</i><span>2 · Wesen</span><i>→</i><span>3 · Ursache: Macht</span><i>→</i><span>4 · Mechanismus</span><i>→</i><span>5 · Gefahr</span><i>→</i><span>6 · Überwindung</span><i>→</i><span>Schluss: Trost</span></div>
+
+  <blockquote class="q big"><p>Dummheit ist ein gefährlicherer Feind des Guten als Bosheit.</p><footer>Erster Satz des Abschnitts · WuE S. 14</footer></blockquote>
+
+  <div style="height:28px"></div>
+
+  <div class="step"><div class="n">1</div><div>
+    <h3>Das Phänomen: Gegen Dummheit ist man wehrlos</h3>
+    <blockquote class="q"><p>Gegen das Böse läßt sich protestieren, es läßt sich bloßstellen, es läßt sich notfalls mit Gewalt verhindern, das Böse trägt immer den Keim der Selbstzersetzung in sich, indem es mindestens ein Unbehagen im Menschen zurückläßt. Gegen die Dummheit sind wir wehrlos. Weder mit Protesten noch durch Gewalt läßt sich hier etwas ausrichten; Gründe verfangen nicht; Tatsachen, die dem eigenen Vorurteil widersprechen, brauchen einfach nicht geglaubt zu werden – in solchen Fällen wird der Dumme sogar kritisch –, und wenn sie unausweichlich sind, können sie einfach als nichtssagende Einzelfälle beiseitegeschoben werden.</p><footer>WuE S. 14–15</footer></blockquote>
+    <p class="expl">Bonhoeffer vergleicht zwei Gegner des Guten. Das Böse lässt sich bekämpfen, weil es im Menschen ein <b>Unbehagen</b> zurücklässt. Die Dummheit ist nach seiner Darstellung immun: gegen Argumente, gegen Fakten (sie werden bezweifelt oder zu „Einzelfällen“ erklärt) und gegen Druck. Dazu kommt: Der Dumme ist <i>„im Unterschied zum Bösen restlos mit sich selbst zufrieden“</i> und wird <i>„sogar gefährlich, indem er leicht gereizt zum Angriff übergeht“</i>. Daraus folgt der schroffe Satz: <i>„Niemals werden wir mehr versuchen, den Dummen durch Gründe zu überzeugen, es ist sinnlos und gefährlich.“</i></p>
+  </div></div>
+
+  <div class="step"><div class="n">2</div><div>
+    <h3>Das Wesen: kein Intelligenz-, sondern ein menschlicher Defekt</h3>
+    <blockquote class="q"><p>Soviel ist sicher, daß sie nicht wesentlich ein intellektueller, sondern ein menschlicher Defekt ist. Es gibt intellektuell außerordentlich bewegliche Menschen, die dumm sind, und intellektuell sehr Schwerfällige, die alles andere als dumm sind.</p><footer>WuE S. 15</footer></blockquote>
+    <p class="expl">Das ist die entscheidende Verschiebung: „Dumm“ meint bei Bonhoeffer nicht <b>geringe Intelligenz</b>, sondern einen Mangel im Menschsein, in Urteilskraft und Selbstständigkeit. Und weiter: <i>„Dabei gewinnt man weniger den Eindruck, daß die Dummheit ein angeborener Defekt ist, als daß unter bestimmten Umständen die Menschen dumm gemacht werden, bzw. sich dumm machen lassen.“</i> Beides steht nebeneinander: Man wird dumm gemacht, und man lässt es mit sich geschehen.</p>
+  </div></div>
+
+  <div class="step"><div class="n">3</div><div>
+    <h3>Die Ursache: Machtentfaltung als „soziologisch-psychologisches Gesetz“</h3>
+    <blockquote class="q"><p>Bei genauerem Zusehen zeigt sich, daß jede starke äußere Machtentfaltung, sei sie politischer oder religiöser Art, einen großen Teil der Menschen mit Dummheit schlägt. Ja, es hat den Anschein, als sei das geradezu ein soziologisch-psychologisches Gesetz. Die Macht der einen braucht die Dummheit der anderen.</p><footer>WuE S. 15</footer></blockquote>
+    <p class="expl">Kurz vorher beobachtet Bonhoeffer, dass <i>„abgeschlossen und einsam lebende Menschen diesen Defekt seltener zeigen als zur Gesellung neigende oder verurteilte Menschen und Menschengruppen“</i>. Die Dummheit sei deshalb <i>„vielleicht weniger ein psychologisches als ein soziologisches Problem“</i>, eine <i>„Begleiterscheinung bestimmter äußerer Verhältnisse“</i>. Er nennt ausdrücklich <b>politische und religiöse</b> Macht. Der Satz <i>„Die Macht der einen braucht die Dummheit der anderen“</i> ist der meistzitierte des Textes.</p>
+  </div></div>
+
+  <div class="step"><div class="n">4</div><div>
+    <h3>Der Mechanismus: Verlust der inneren Selbständigkeit</h3>
+    <blockquote class="q"><p>Der Vorgang ist dabei nicht der, daß bestimmte – also etwa intellektuelle – Anlagen des Menschen plötzlich verkümmern oder ausfallen, sondern daß unter dem überwältigenden Eindruck der Machtentfaltung dem Menschen seine innere Selbständigkeit geraubt wird und daß dieser nun – mehr oder weniger unbewußt – darauf verzichtet, zu den sich ergebenden Lebenslagen ein eigenes Verhalten zu finden.</p><footer>WuE S. 15–16 (die Leseprobe 2025 druckt hier „etwas intellektuelle“, die Erstausgabe 1951 „etwa intellektuelle“)</footer></blockquote>
+    <p class="expl">Die Schlüsselbegriffe sind <b>„innere Selbständigkeit“</b> und <b>„eigenes Verhalten“</b>. Wer sie verliert, kann trotzdem eigensinnig wirken: <i>„Daß der Dumme oft bockig ist, darf nicht darüber hinwegtäuschen, daß er nicht selbständig ist.“</i> Im Gespräch merke man, <i>„daß man es garnicht mit ihm selbst, mit ihm persönlich, sondern mit über ihn mächtig gewordenen Schlagworten, Parolen etc. zu tun hat. Er ist in einem Banne, er ist verblendet, er ist in seinem eigenen Wesen mißbraucht, mißhandelt.“</i> Auffällig ist, dass Bonhoeffer den Dummen hier auch als <b>Opfer</b> beschreibt.</p>
+  </div></div>
+
+  <div class="step"><div class="n">5</div><div>
+    <h3>Die Gefahr: das willenlose Instrument</h3>
+    <blockquote class="q"><p>So zum willenlosen Instrument geworden, wird der Dumme auch zu allem Bösen fähig sein und zugleich unfähig, dies als Böses zu erkennen. Hier liegt die Gefahr eines diabolischen Mißbrauches, dadurch werden Menschen für immer zugrunde gerichtet werden können.</p><footer>WuE S. 16</footer></blockquote>
+    <p class="expl">Hier schließt sich der Kreis zum ersten Satz. Dummheit ist „gefährlicher als Bosheit“, weil sie das Böse ausführt, <b>ohne es als Böses zu erkennen</b>. Damit fällt das „Unbehagen“ weg, das beim Bösen noch als Korrektiv wirkte.</p>
+  </div></div>
+
+  <div class="step"><div class="n">6</div><div>
+    <h3>Die Überwindung: Befreiung statt Belehrung</h3>
+    <blockquote class="q"><p>Aber es ist gerade hier auch ganz deutlich, daß nicht ein Akt der Belehrung, sondern allein ein Akt der Befreiung die Dummheit überwinden könnte. Dabei wird man sich damit abfinden müssen, daß eine echte innere Befreiung in den allermeisten Fällen erst möglich wird, nachdem die äußere Befreiung vorangegangen ist; bis dahin werden wir auf alle Versuche, den Dummen zu überzeugen, verzichten müssen.</p><footer>WuE S. 16</footer></blockquote>
+    <p class="expl">Weil die Ursache nicht Unwissen ist, hilft auch kein Wissen. Bonhoeffer unterscheidet <b>äußere Befreiung</b> (das Ende der überwältigenden Macht, 1942 im Kreis der Umsturzplaner geschrieben) und <b>innere Befreiung</b>. Der theologische Kern folgt am Ende: <i>„Das Wort der Bibel, daß die Furcht Gottes der Anfang der Weisheit sei, sagt, daß die innere Befreiung des Menschen zum verantwortlichen Leben vor Gott die einzige wirkliche Überwindung der Dummheit ist.“</i> (Psalm 111,10). Im Zusammenhang des Essays (vgl. „Wer hält stand?“, Abschnitt 05) ist damit die alleinige Bindung an Gott als Grund „verantwortlicher Tat“ gemeint. Dazwischen steht noch eine Bemerkung zur Frage, was „das Volk“ denkt: Sie sei für den verantwortlich Handelnden <i>„zugleich so überflüssig … – immer nur unter den gegebenen Umständen“</i>.</p>
+  </div></div>
+
+  <div class="step"><div class="n">✦</div><div>
+    <h3>Der Schluss: ein „Tröstliches“</h3>
+    <blockquote class="q"><p>Übrigens haben diese Gedanken über die Dummheit doch dies Tröstliche für sich, daß sie ganz und garnicht zulassen, die Mehrzahl der Menschen unter allen Umständen für dumm zu halten. Es wird wirklich darauf ankommen, ob Machthaber sich mehr von der Dummheit oder von der inneren Selbständigkeit und Klugheit der Menschen versprechen.</p><footer>WuE S. 16</footer></blockquote>
+    <p class="expl">Wenn Dummheit an Umstände gebunden ist, dann ist sie <b>kein Urteil über Menschen an sich</b>. Der unmittelbar folgende Abschnitt „Menschenverachtung?“ unterstreicht das: <i>„mit der Menschenverachtung verfallen wir gerade dem Hauptfehler unserer Gegner“</i> und <i>„Wir müssen lernen, die Menschen weniger auf das, was sie tun und unterlassen, als auf das, was sie erleiden, anzusehen.“</i> (S. 17). Auch Miyata liest den Schluss als bewusste Abwehr einer elitären Überheblichkeit gegenüber „dem Volk“.</p>
+  </div></div>
+
+  <h3>Einordnung in Bonhoeffers Denken und Umfeld</h3>
+  <div class="grid g2">
+    <div class="card"><span class="lbl">Ethik der Klugheit</span><p>Im Abschnitt „Immanente Gerechtigkeit“ desselben Essays heißt es: <i>„Klugheit und Dummheit sind nicht ethisch indifferent, wie uns eine neuprotestantische Gesinnungsethik hat lehren wollen.“</i> (S. 18). Dummheit ist für Bonhoeffer also eine <b>ethische</b> Kategorie, keine bloß intellektuelle.</p></div>
+    <div class="card"><span class="lbl">Das Elternhaus</span><p>Der Bonhoeffer-Forscher Mitsuo Miyata vermutet, dass die Analyse auch auf Gesprächen mit dem Vater beruhte, dem Psychiater Karl Bonhoeffer. Dieser schrieb 1947 den Aufsatz „Führerpersönlichkeit und Massenwahn“. Das ist eine <b>Deutung</b> der Sekundärliteratur, kein Selbstzeugnis Bonhoeffers.</p></div>
+    <div class="card"><span class="lbl">Selbstkritik</span><p>Der Essay kritisiert auch das eigene Milieu, etwa im Abschnitt „Civilcourage?“: <i>„Wir haben in diesen Jahren viel Tapferkeit und Aufopferung, aber fast nirgends Civilcourage gefunden, auch bei uns selbst nicht.“</i> (S. 12).</p></div>
+    <div class="card"><span class="lbl">Textgestalt</span><p>Die Erstausgabe 1951 (Wikisource) und die heutige Taschenbuchausgabe unterscheiden sich nur minimal, etwa bei „Mißbrauch. Dadurch“ / „Mißbrauches, dadurch“ und „dies tröstliche“ / „dies Tröstliche“. Maßgeblich ist heute die kritische Ausgabe DBW 8.</p></div>
+  </div>
+
+  <details>
+    <summary>▸ Den vollständigen Text „Von der Dummheit“ lesen (Erstausgabe 1951, gemeinfrei)</summary>
+    <div class="fulltext">
+      <p>Dummheit ist ein gefährlicherer Feind des Guten als Bosheit. Gegen das Böse läßt sich protestieren, es läßt sich bloßstellen, es läßt sich notfalls mit Gewalt verhindern, das Böse trägt immer den Keim der Selbstzersetzung in sich, indem es mindestens ein Unbehagen im Menschen zurückläßt. Gegen die Dummheit sind wir wehrlos. Weder mit Protesten noch durch Gewalt läßt sich hier etwas ausrichten; Gründe verfangen nicht; Tatsachen, die dem eigenen Vorurteil widersprechen, brauchen einfach nicht geglaubt zu werden – in solchen Fällen wird der Dumme sogar kritisch – und wenn sie unausweichlich sind, können sie einfach als nichtssagende Einzelfälle beiseitegeschoben werden. Dabei ist der Dumme im Unterschied zum Bösen restlos mit sich selbst zufrieden; ja, er wird sogar gefährlich, indem er leicht gereizt zum Angriff übergeht. Daher ist dem Dummen gegenüber mehr Vorsicht geboten als gegenüber dem Bösen. Niemals werden wir mehr versuchen, den Dummen durch Gründe zu überzeugen; es ist sinnlos und gefährlich.</p>
+      <p>Um zu wissen, wie wir der Dummheit beikommen können, müssen wir ihr Wesen zu verstehen suchen. Soviel ist sicher, daß sie nicht wesentlich ein intellektueller, sondern ein menschlicher Defekt ist. Es gibt intellektuell außerordentlich bewegliche Menschen, die dumm sind, und intellektuell sehr Schwerfällige, die alles andere als dumm sind. Diese Entdeckung machen wir zu unserer Überraschung anläßlich bestimmter Situationen. Dabei gewinnt man weniger den Eindruck, daß die Dummheit ein angeborener Defekt ist, als daß unter bestimmten Umständen die Menschen dumm gemacht werden, bzw. sich dumm machen lassen. Wir beobachten weiterhin, daß abgeschlossen und einsam lebende Menschen diesen Defekt seltener zeigen als zur Gesellung neigende oder verurteilte Menschen und Menschengruppen. So scheint die Dummheit vielleicht weniger ein psychologisches als ein soziologisches Problem zu sein. Sie ist eine besondere Form der Einwirkung geschichtlicher Umstände auf den Menschen, eine psychologische Begleiterscheinung bestimmter äußerer Verhältnisse. Bei genauerem Zusehen zeigt sich, daß jede starke äußere Machtentfaltung, sei sie politischer oder religiöser Art, einen großen Teil der Menschen mit Dummheit schlägt. Ja, es hat den Anschein, als sei das geradezu ein soziologisch-psychologisches Gesetz. Die Macht der einen braucht die Dummheit der anderen. Der Vorgang ist dabei nicht der, daß bestimmte – also etwa intellektuelle – Anlagen des Menschen plötzlich verkümmern oder ausfallen, sondern daß unter dem überwältigenden Eindruck der Machtentfaltung dem Menschen seine innere Selbständigkeit geraubt wird und daß dieser nun – mehr oder weniger unbewußt – darauf verzichtet, zu den sich ergebenden Lebenslagen ein eigenes Verhalten zu finden. Daß der Dumme oft bockig ist, darf nicht darüber hinwegtäuschen, daß er nicht selbständig ist. Man spürt es geradezu im Gespräch mit ihm, daß man es gar nicht mit ihm selbst, mit ihm persönlich, sondern mit über ihn mächtig gewordenen Schlagworten, Parolen etc. zu tun hat. Er ist in einem Banne, er ist verblendet, er ist in seinem eigenen Wesen mißbraucht, mißhandelt. So zum willenlosen Instrument geworden, wird der Dumme auch zu allem Bösen fähig sein und zugleich unfähig, dies als Böses zu erkennen. Hier liegt die Gefahr eines diabolischen Mißbrauchs. Dadurch werden Menschen für immer zugrunde gerichtet werden können.</p>
+      <p>Aber es ist gerade hier auch ganz deutlich, daß nicht ein Akt der Belehrung, sondern allein ein Akt der Befreiung die Dummheit überwinden könnte. Dabei wird man sich damit abfinden müssen, daß eine echte innere Befreiung in den allermeisten Fällen erst möglich wird, nachdem die äußere Befreiung vorangegangen ist; bis dahin werden wir auf alle Versuche, den Dummen zu überzeugen, verzichten müssen. In dieser Sachlage wird es übrigens auch begründet sein, daß wir uns unter solchen Umständen vergeblich darum bemühen zu wissen, was „das Volk“ eigentlich denkt, und warum diese Frage für den verantwortlich Denkenden und Handelnden zugleich so überflüssig ist – immer nur unter den gegebenen Umständen. Das Wort der Bibel, daß die Furcht Gottes der Anfang der Weisheit sei, sagt, daß die innere Befreiung des Menschen zum verantwortlichen Leben vor Gott die einzige wirkliche Überwindung der Dummheit ist.</p>
+      <p>Übrigens haben diese Gedanken über die Dummheit doch dies tröstliche für sich, daß sie ganz und gar nicht zulassen, die Mehrzahl der Menschen unter allen Umständen für dumm zu halten. Es wird wirklich darauf ankommen, ob Machthaber sich mehr von der Dummheit oder von der inneren Selbständigkeit und Klugheit der Menschen versprechen.</p>
+      <p style="font-family:var(--sans);font-size:12.5px;color:var(--muted)">Text: Dietrich Bonhoeffer, Widerstand und Ergebung, hg. v. Eberhard Bethge, München: Chr. Kaiser 1951, S. 17–20, nach <a href="https://de.wikisource.org/wiki/Von_der_Dummheit">Wikisource</a> (zweifach korrekturgelesen). Bonhoeffer starb 1945; seine Texte sind seit 2016 gemeinfrei.</p>
+    </div>
+  </details>
+</section>
+
+<!-- 5 -->
+<section id="umfeld">
+  <h2><span class="num">05 · IM SELBEN ESSAY</span>Weitere Schlüsselstellen aus „Nach zehn Jahren“</h2>
+  <p class="sub">„Von der Dummheit“ versteht man besser im Zusammenhang mit den anderen Abschnitten.</p>
+  <div class="grid g2">
+    <blockquote class="q"><p>Wer hält stand? Allein der, dem nicht seine Vernunft, sein Prinzip, sein Gewissen, seine Freiheit, seine Tugend der letzte Maßstab ist, sondern der dies alles zu opfern bereit ist, wenn er im Glauben und in alleiniger Bindung an Gott zu gehorsamer und verantwortlicher Tat gerufen ist […].</p><footer>„Wer hält stand?“ · WuE S. 12</footer></blockquote>
+    <blockquote class="q"><p>Der Mann der Pflicht wird schließlich auch noch dem Teufel gegenüber seine Pflicht erfüllen müssen.</p><footer>„Wer hält stand?“ · WuE S. 11</footer></blockquote>
+    <blockquote class="q"><p>Civilcourage aber kann nur aus der freien Verantwortlichkeit des freien Mannes erwachsen.</p><footer>„Civilcourage?“ · WuE S. 13</footer></blockquote>
+    <blockquote class="q"><p>Die letzte verantwortliche Frage ist nicht, wie ich mich heroisch aus der Affäre ziehe, sondern [wie] eine kommende Generation weiterleben soll.</p><footer>„Vom Erfolg“ · WuE S. 14</footer></blockquote>
+    <blockquote class="q"><p>Ich glaube, daß Gott aus allem, auch aus dem Bösesten, Gutes entstehen lassen kann und will. Dafür braucht er Menschen, die sich alle Dinge zum Besten dienen lassen.</p><footer>„Einige Glaubenssätze über das Walten Gottes in der Geschichte“ · WuE S. 18</footer></blockquote>
+    <blockquote class="q"><p>Tatenloses Abwarten und stumpfes Zuschauen sind keine christlichen Haltungen.</p><footer>„Mitleiden“ · WuE S. 22</footer></blockquote>
+    <blockquote class="q"><p>Wir sind stumme Zeugen böser Taten gewesen, wir sind mit vielen Wassern gewaschen, wir haben die Künste der Verstellung und der mehrdeutigen Rede gelernt […] – sind wir noch brauchbar?</p><footer>„Sind wir noch brauchbar?“ · nach Internationaler Bonhoeffer-Gesellschaft</footer></blockquote>
+    <blockquote class="q"><p>Es bleibt ein Erlebnis von unvergleichlichem Wert, daß wir die großen Ereignisse der Weltgeschichte einmal von unten, aus der Perspektive der Ausgeschalteten, Beargwöhnten, Schlechtbehandelten, Machtlosen, Unterdrückten und Verhöhnten, kurz der Leidenden, sehen gelernt haben.</p><footer>„Der Blick von unten“ · nach Internationaler Bonhoeffer-Gesellschaft</footer></blockquote>
+  </div>
+</section>
+
+<!-- 6 -->
+<section id="werke">
+  <h2><span class="num">06 · WERK</span>Hauptwerke im Überblick</h2>
+  <p class="sub">Kritische Gesamtausgabe: <i>Dietrich Bonhoeffer Werke</i> (DBW), 17 Bände, 1986–1999, Chr. Kaiser / Gütersloher Verlagshaus, hg. v. E. Bethge, E. Feil, C. Gremmels, W. Huber, H. Pfeifer, A. Schönherr, H. E. Tödt, I. Tödt.</p>
+  <div class="grid g2 works">
+    <div class="card"><span class="lbl">Aufsatz · 1933</span><h4>Die Kirche vor der Judenfrage</h4><span class="yr">April 1933, gedruckt Juni 1933 · DBW 12, S. 349–358</span><p>Bonhoeffer nennt drei Möglichkeiten kirchlichen Handelns gegenüber dem Staat: ihn nach der Legitimität seines Handelns fragen, den Opfern dienen und, als dritte:</p><blockquote>„nicht nur die Opfer unter dem Rad zu verbinden, sondern dem Rad selbst in die Speichen zu fallen.“</blockquote><span class="ref">DBW 12, S. 353</span></div>
+    <div class="card"><span class="lbl">Buch · 1937</span><h4>Nachfolge</h4><span class="yr">erschienen November 1937 · DBW 4</span><p>Bonhoeffers Auslegung der Bergpredigt, aus der Finkenwalder Lehre entstanden. Er kritisiert eine Gnade, die zu nichts verpflichtet, und stellt dagegen die „teure Gnade“ der Nachfolge.</p><blockquote>„Billige Gnade ist der Todfeind unserer Kirche. Unser Kampf heute geht um die teure Gnade.“</blockquote><span class="ref">Kap. „Die teure Gnade“, Anfang</span></div>
+    <div class="card"><span class="lbl">Buch · 1939</span><h4>Gemeinsames Leben</h4><span class="yr">geschrieben September 1938 in Göttingen, erschienen 1939 · DBW 5</span><p>Entstanden nach der Schließung Finkenwaldes durch die Gestapo: eine Beschreibung christlicher Gemeinschaft (Gebet, Schrift, Dienst, Beichte), die nach dem Herausgeberwort den Einzelnen „frei, stark und mündig“ machen will.</p><blockquote>„Wer nicht allein sein kann, der hüte sich vor der Gemeinschaft. Wer nicht in der Gemeinschaft steht, der hüte sich vor dem Alleinsein.“</blockquote><span class="ref">Kap. „Der einsame Tag“</span></div>
+    <div class="card"><span class="lbl">Fragment · 1940–1943</span><h4>Ethik</h4><span class="yr">postum 1949 hg. v. Bethge · DBW 6 (1992, rekonstruierte Entstehungsfolge)</span><p>Unvollendete Manuskripte aus der Zeit der Konspiration, teils im Elternhaus geschrieben. Themen sind Wirklichkeit, verantwortliches Handeln und Schuldübernahme. Gegen das „Denken in zwei Räumen“ schreibt er:</p><blockquote>„Es gibt nicht zwei Wirklichkeiten, sondern nur eine Wirklichkeit, und das ist die in Christus offenbargewordene Gotteswirklichkeit in der Weltwirklichkeit.“</blockquote><span class="ref">Abschnitt „Christus, die Wirklichkeit und das Gute“</span></div>
+    <div class="card"><span class="lbl">Briefe &amp; Aufzeichnungen · 1943–1945</span><h4>Widerstand und Ergebung</h4><span class="yr">hg. v. Bethge 1951 · DBW 8 (1998)</span><p>Briefe aus Tegel an Eltern und an Eberhard Bethge, dazu Gedichte, Gebete und theologische Entwürfe, darunter die Frage nach einem „religionslosen Christentum“ in einer „mündig gewordenen Welt“.</p><blockquote>„Was mich unablässig bewegt, ist die Frage, was das Christentum oder auch wer Christus heute für uns eigentlich ist.“</blockquote><span class="ref">Brief an Bethge, 30. April 1944</span></div>
+    <div class="card"><span class="lbl">Gedichte aus der Haft · 1944</span><h4>„Wer bin ich?“ &amp; „Von guten Mächten“</h4><span class="yr">Tegel, Sommer 1944 · Prinz-Albrecht-Straße, 19. Dezember 1944</span><blockquote>„Wer bin ich? Einsames Fragen treibt mit mir Spott. / Wer ich auch bin, Du kennst mich, Dein bin ich, o Gott!“</blockquote><blockquote>„Von guten Mächten wunderbar geborgen, / erwarten wir getrost, was kommen mag. / Gott ist bei uns am Abend und am Morgen / und ganz gewiß an jedem neuen Tag.“</blockquote><span class="ref">„Von guten Mächten“: Beilage zum letzten Brief an Maria von Wedemeyer (KZ-Gedenkstätte Flossenbürg)</span></div>
+  </div>
+  <p style="margin-top:18px">Frühe akademische Werke: <i>Sanctorum Communio</i> (Dissertation 1927, DBW 1), <i>Akt und Sein</i> (Habilitation 1930, DBW 2), <i>Schöpfung und Fall</i> (Vorlesung 1932/33, DBW 3).</p>
+</section>
+
+<!-- 7 -->
+<section id="zitatcheck">
+  <h2><span class="num">07 · QUELLENKRITIK</span>Zitat-Check: echt, überliefert oder fraglich?</h2>
+  <p class="sub">Viele Sätze kursieren unter Bonhoeffers Namen. So steht es um die bekanntesten.</p>
+  <table class="check">
+    <thead><tr><th>Zitat</th><th>Status</th><th>Befund</th></tr></thead>
+    <tbody>
+      <tr><td>„Dummheit ist ein gefährlicherer Feind des Guten als Bosheit.“</td><td><span class="tag ok">Belegt</span></td><td>Wörtlich in „Nach zehn Jahren“ (WuE 1951, S. 17; Ausgabe 2025, S. 14; DBW 8).</td></tr>
+      <tr><td>„Die Macht der einen braucht die Dummheit der anderen.“</td><td><span class="tag ok">Belegt</span></td><td>Wörtlich, ebd.</td></tr>
+      <tr><td>„Theorie der Dummheit“</td><td><span class="tag mid">Etikett</span></td><td>Spätere, populäre Bezeichnung. Bonhoeffers Überschrift lautet „Von der Dummheit“.</td></tr>
+      <tr><td>„dem Rad selbst in die Speichen zu fallen“</td><td><span class="tag ok">Belegt</span></td><td>„Die Kirche vor der Judenfrage“, 1933 (DBW 12, S. 353). Es ist eine von drei Möglichkeiten der Kirche, an Bedingungen geknüpft, und kein allgemeiner Aufruf.</td></tr>
+      <tr><td>„Nur wer für die Juden schreit, darf auch gregorianisch singen.“</td><td><span class="tag mid">Nur mündlich</span></td><td>Nicht in Bonhoeffers Schriften belegt, nur mündlich überliefert. Bethge datierte ihn auf Ende 1935 (Finkenwalde). Auch die Form „(Nur)“ ist unsicher (A. Pangritz 2014).</td></tr>
+      <tr><td>„Das ist das Ende – für mich der Beginn des Lebens.“</td><td><span class="tag mid">Überliefert</span></td><td>Abschiedsworte nach der Erinnerung des britischen Mitgefangenen Payne Best, als Gruß an Bischof Bell (bei Bethge abgedruckt). Es ist kein Text von Bonhoeffer selbst.</td></tr>
+      <tr><td>„Schweigen im Angesicht des Bösen ist selbst böse …“ u. ä.</td><td><span class="tag no">Ohne Beleg</span></td><td>In dieser Form in den hier geprüften Primärtexten nicht gefunden. Solche Sätze sollte man ohne DBW-Stelle nicht Bonhoeffer zuschreiben.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 8 -->
+<section id="quellen">
+  <h2><span class="num">08 · QUELLEN</span>Verwendete Quellen</h2>
+  <p class="sub">Alle Links wurden bei der Recherche am 13.10.2026 aufgerufen.</p>
+  <h3>Primärtexte</h3>
+  <ol class="src">
+    <li>Gütersloher Verlagshaus / Penguin Random House: <a href="https://www.penguin.de/content/edition/excerpts_extended/Leseprobe_978-3-579-07119-0.pdf">Leseprobe „Widerstand und Ergebung“, 26. Aufl. 2025 (PDF)</a>, mit Vorwort Bethge und „Nach zehn Jahren“ ab S. 9 (Leseprobe bis S. 24). <span class="d">Primärquelle für alle Seitenangaben „WuE“</span></li>
+    <li>Wikisource: <a href="https://de.wikisource.org/wiki/Von_der_Dummheit">„Von der Dummheit“</a>, nach der Erstausgabe 1951 (Chr. Kaiser), S. 17–20.</li>
+    <li>Internationale Bonhoeffer-Gesellschaft: Werkausgabe <a href="https://www.dietrich-bonhoeffer.net/werk/band/8/widerstand-und-ergebung/">DBW 8</a> · <a href="https://www.dietrich-bonhoeffer.net/werk/band/4/nachfolge/">DBW 4</a> · <a href="https://www.dietrich-bonhoeffer.net/werk/band/5/gemeinsames-leben-das-gebetbuch-der-bibel/">DBW 5</a> · <a href="https://www.dietrich-bonhoeffer.net/werk/band/6/ethik/">DBW 6</a> · <a href="https://www.dietrich-bonhoeffer.net/werk/band/12/berlin-1932-1933/">DBW 12</a></li>
+    <li>IBG-Zitatseiten: <a href="https://www.dietrich-bonhoeffer.net/zitat/494-wir-sind-stumme-zeugen-boese/">„Sind wir noch brauchbar?“</a> · <a href="https://www.dietrich-bonhoeffer.net/zitat/585-es-bleibt-ein-erlebnis-von/">„Der Blick von unten“</a></li>
+  </ol>
+  <h3>Biografie &amp; Geschichte</h3>
+  <ol class="src" start="5">
+    <li>Internationale Bonhoeffer-Gesellschaft / Gütersloher Verlagshaus: <a href="https://www.dietrich-bonhoeffer.net/fileadmin/media/downloadangebot/lebenslauf_dietrich_bonhoeffer_25419.pdf">Lebenslauf Dietrich Bonhoeffer 1906–1945 (PDF)</a></li>
+    <li>KZ-Gedenkstätte Flossenbürg: <a href="https://www.gedenkstaette-flossenbuerg.de/de/geschichte/haeftlinge/dietrich-bonhoeffer">Dietrich Bonhoeffer</a> · <a href="https://www.gedenkstaette-flossenbuerg.de/de/presse/pressemeldungen/themenrundgang-77-todestag-bonhoeffer">Pressemitteilung zum 77. Todestag (2022)</a></li>
+    <li>Bonhoeffer Initiative (Projekt der KZ-Gedenkstätte Flossenbürg): <a href="https://www.bonhoeffer-initiative.com/de/dietrich-bonhoeffer/work">Kirchenkampf und Widerstand</a> · <a href="https://www.bonhoeffer-initiative.com/de/final-hours/krematorium">Die letzten Stunden in Flossenbürg</a></li>
+    <li>Gedenkstätte Deutscher Widerstand: Biografien <a href="https://www.gdw-berlin.de/vertiefung/biografien/personenverzeichnis/biografie/view-bio/dietrich-bonhoeffer/">Dietrich Bonhoeffer</a> · <a href="https://www.gdw-berlin.de/vertiefung/biografien/personenverzeichnis/biografie/view-bio/hans-von-dohnanyi/">Hans von Dohnanyi</a> · <a href="https://www.gdw-berlin.de/vertiefung/biografien/personenverzeichnis/biografie/view-bio/klaus-bonhoeffer/">Klaus Bonhoeffer</a></li>
+  </ol>
+  <h3>Sekundärliteratur (online)</h3>
+  <ol class="src" start="9">
+    <li>Mitsuo Miyata (mit Ilse Tödt): <a href="https://www.dietrich-bonhoeffer.net/fileadmin/media/ibg/2023_08_31b_korr_Nach_zehn_Jahren_mmiyata.pdf">„Analyse der geistigen Situation zur Zeit des Nationalsozialismus. Eine Einführung zu Bonhoeffers Rechenschaft ‚Nach zehn Jahren‘“</a>, IBG 2023 (PDF) · <a href="https://www.dietrich-bonhoeffer.net/forschung-aktuell/forschung-einzelmeldung/eine-einfuehrung-zu-bonhoeffers-rechenschaftsbericht-nach-zehn-jahren/">Ankündigungsseite</a></li>
+    <li>Andreas Pangritz: <a href="https://tst-publikationen.uni-tuebingen.de/xmlui/bitstream/handle/10900/137473/Pangritz_154.pdf?isAllowed=y&amp;sequence=1">„Musik und Gespräch bei Dietrich Bonhoeffer“</a>, Glaube und Lernen 29 (2014), Manuskriptfassung, Universität Tübingen</li>
+    <li>Wolfgang Vögele: <a href="https://www.theologie.uzh.ch/apps/gpi/ueber-den-essay-nach-zehn-jahren-wen-11-27/">„Über den Essay ‚Nach zehn Jahren‘“</a>, Göttinger Predigten im Internet (Universität Zürich), 2021</li>
+    <li>Ev. Kirchengemeinde Flossenbürg: <a href="http://www.flossenbuerg-evangelisch.de/bonhoeffer.html">Bonhoeffer – Hinrichtung</a> (Überlieferung Payne Best)</li>
+  </ol>
+</section>
+
+<!-- 9 -->
+<section id="lesen">
+  <h2><span class="num">09 · WEITERLESEN</span>Leseliste</h2>
+  <p class="sub">Vom Einstieg bis zur wissenschaftlichen Ausgabe.</p>
+  <ul class="read">
+    <li><b>Dietrich Bonhoeffer: Widerstand und Ergebung</b>Hg. Eberhard Bethge, Gütersloher Verlagshaus, Taschenbuch (ISBN 978-3-579-07119-0)<span class="why">Der Einstieg mit „Nach zehn Jahren“, Briefen und Gedichten.</span></li>
+    <li><b>DBW 8: Widerstand und Ergebung</b>Hg. C. Gremmels, E. Bethge, R. Bethge, I. Tödt (ISBN 978-3-579-01878-2)<span class="why">Kritische Ausgabe mit Kommentar; „Nach zehn Jahren“ S. 19–39.</span></li>
+    <li><b>Eberhard Bethge: Dietrich Bonhoeffer. Theologe – Christ – Zeitgenosse</b>München: Chr. Kaiser 1967; 9. Aufl. Gütersloh 2005<span class="why">Die grundlegende Biografie, geschrieben vom engsten Freund und Briefpartner.</span></li>
+    <li><b>Christiane Tietz: Dietrich Bonhoeffer. Theologe im Widerstand</b>C. H. Beck Wissen, 2013<span class="why">Kompakte, aktuelle Einführung in Leben und Denken.</span></li>
+    <li><b>Ferdinand Schlingensiepen: Dietrich Bonhoeffer 1906–1945. Eine Biographie</b>C. H. Beck, 2005<span class="why">Gut lesbare Gesamtdarstellung.</span></li>
+    <li><b>DBW 4: Nachfolge</b>Hg. M. Kuske, I. Tödt (ISBN 978-3-579-01874-4)<span class="why">„Teure Gnade“ und Bergpredigt.</span></li>
+    <li><b>DBW 5: Gemeinsames Leben / Das Gebetbuch der Bibel</b>Hg. G. L. Müller, A. Schönherr (ISBN 978-3-579-01875-1)<span class="why">Die Finkenwalder Erfahrung.</span></li>
+    <li><b>DBW 6: Ethik</b>Hg. I. Tödt, H. E. Tödt, E. Feil, C. Green (ISBN 978-3-579-01876-8)<span class="why">Verantwortung und Schuldübernahme aus der Zeit der Konspiration.</span></li>
+    <li><b>Winfried Meyer: Unternehmen Sieben</b>Frankfurt a. M. 1993<span class="why">Die Rettungsaktion der Abwehr für bedrohte Juden, an der Bonhoeffer beteiligt war.</span></li>
+    <li><b>Mitsuo Miyata: Einführung zu „Nach zehn Jahren“</b>IBG 2023, <a href="https://www.dietrich-bonhoeffer.net/fileadmin/media/ibg/2023_08_31b_korr_Nach_zehn_Jahren_mmiyata.pdf">online (PDF)</a><span class="why">Eine gründliche Auslegung, auch von „Von der Dummheit“.</span></li>
+  </ul>
+</section>
+
+</main>
+<footer class="end"><div class="wrap">
+  Recherchebericht für Frank Helmschrott · erstellt von Grok Bot am 13.10.2026 · Alle Zitate wurden gegen Primärquellen geprüft (Verlags-Leseprobe 2025, Erstausgabe 1951 via Wikisource, Seiten der Internationalen Bonhoeffer-Gesellschaft). Bewusst ohne Bezüge zur Gegenwart: Der Bericht behandelt allein Bonhoeffer und seinen historischen Kontext.
+</div></footer>
+</body>
+</html>
